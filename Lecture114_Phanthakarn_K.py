@@ -10,11 +10,6 @@ main_window = tk.Tk()
 main_window.geometry("500x450")
 main_window.title("USD History")
 main_window.configure(background="#C0C0C0")
-string_default = tk.StringVar()
-string_default.set("--")
-string_year_default = tk.StringVar()
-string_year_default.set("----")
-
 
 def calculate_click():
     start_day = select_start_day.get()
@@ -88,38 +83,32 @@ end_date = tk.Label(main_window, text="select end date", background='black',
                     foreground='white', font=('Helvetica', 16, 'bold'))
 end_date.place(x=280, y=100, width=170, height=30)
 
-select_start_day = ttk.Combobox(
-    main_window, width=2, textvariable=string_default)
+select_start_day = ttk.Combobox(main_window, width=2)
 select_start_day['values'] = ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13",
                               "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")
 select_start_day.place(x=70, y=140)
 
-select_start_month = ttk.Combobox(
-    main_window, width=2, textvariable=string_default)
+select_start_month = ttk.Combobox(main_window, width=2)
 select_start_month['values'] = (
     "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
 select_start_month.place(x=110, y=140)
 
-select_start_year = ttk.Combobox(
-    main_window, width=4, textvariable=string_year_default)
+select_start_year = ttk.Combobox(main_window, width=4)
 select_start_year['values'] = ("2005", "2006", "2007", "2008", "2009", "2010", "2011",
                                "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021")
 select_start_year.place(x=150, y=140)
 
-select_end_day = ttk.Combobox(
-    main_window, width=2, textvariable=string_default)
+select_end_day = ttk.Combobox(main_window, width=2)
 select_end_day['values'] = ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13",
                             "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")
 select_end_day.place(x=305, y=140)
 
-select_end_month = ttk.Combobox(
-    main_window, width=2, textvariable=string_default)
+select_end_month = ttk.Combobox(main_window, width=2)
 select_end_month['values'] = (
     "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
 select_end_month.place(x=345, y=140)
 
-select_end_year = ttk.Combobox(
-    main_window, width=4, textvariable=string_year_default)
+select_end_year = ttk.Combobox(main_window, width=4)
 select_end_year['values'] = ("2005", "2006", "2007", "2008", "2009", "2010", "2011",
                              "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021")
 select_end_year.place(x=385, y=140)
